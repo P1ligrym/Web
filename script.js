@@ -1,69 +1,49 @@
-function Time() {
-var message = document.getElementById("textArea").value;
-setTimeout(() => {alert(message), clear()},3000);
-}
+// function deleteElem(){
+//     let text = document.getElementById("text");
+//     let num = parseInt(document.getElementById("number").value);
 
-function clear() {
-var textarea = document.getElementById("textArea");
-textarea.value="";}
-
-
-function openWin() {
-    var newWindow = window.open("",height=300,width=600);
-    newWindow .document.body.style.background =  "green";
-    setTimeout(() => {newWindow .document.body.style.background =  "yellow"},3000);
-}
-
-window.onload = function windowOpen() {
-    setTimeout(openWin,3000);
-}
+//     // var line = text.value.split(" ");
+//     // for(var i = 0; i < line.length; i++){
+//     //     if(line[i].length > num) {
+//     //         delete line[i];
+//     //     }
+//     // }
+//     // text.value = line.join(" ");
+//     let words = text.value.split(" ");
+//     text.value = words.filter(function(a){return a.length < num}).join();
+//  }
 
 
-document.getElementById('stop').disabled = "false";
 
-function start(){
-interval = setInterval(startTimer, 1000);
-}
+  
+// function printDate(){
+//     var data = new Date();
+//     console.log(data);
+//     var vacantion = new Date(2021, 6, 1);
+//     var vacantion1 = new Date(2021, 7, 31);
+//     console.log(vacantion1);
+//     console.log(vacantion);
 
-function startTimer() {
-    var time = my_timer.innerHTML;
-    var arr = time.split(":");
-    var h = arr[0];
-    var m = arr[1];
-    var s = arr[2];
-    if (s == 59) {
-        m++;
-        if (m < 10) m = "0" + m;
-        s = 0;
-    }
+//     var dats = new Date(); 
+//     dats = vacantion - data;
+//     dats = parseInt( dats / (3600 * 24 * 1000));
 
-    if (m == 60 ) {
-        m = 0 +"0";
-        h++;
-        if (h < 10) h = "0" + h;
-    }
-    
-    else s++;
-    if (s < 10) s = "0" + s;
-    document.getElementById("my_timer").innerHTML = h+":"+m+":"+s;
-    document.getElementById('start').disabled = "false";
-    document.getElementById('stop').removeAttribute('disabled');
-}
+//     if(  1 > dats &&  dats > -62) {
+//         window.alert("Канікули")
+//     }
+//     if(dats < -61) 
+//     {
+//         window.alert(365 + dats + " днів");
+//     }
+//     else {
+//         window.alert( dats + " днів"); 
+//     }    
+// }
 
-
-function stop() {
-    clearInterval(interval);
-    document.getElementById('start').removeAttribute('disabled');
-    document.getElementById('stop').disabled = "false";
-}
-
-
-function newColor() { 
-   setInterval(changeColors,3000);
- }
-
-function changeColors() {
-    var about = document.getElementById('change');
-    var colors = ['red','blue','yellow','green','orange']
-    about.style.color = colors[Math.floor(Math.random() * colors.length)];    
-}
+// onload = function proportion(){
+//     let txt1 = parseInt(document.getElementById("txt1").value);
+//     let txt2 =  parseInt(document.getElementById("txt2").value);
+//     let txt3 =  parseInt(document.getElementById("txt3").value);
+//     let txt4 =  document.getElementById("txt4");
+//     txt4.value = (txt3 * txt2) / txt1;
+// }
