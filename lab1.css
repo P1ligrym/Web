@@ -1,0 +1,56 @@
+
+body{
+	background-image:url(auto.jpg);
+	background-attachment: scroll;
+	background-size: auto auto;
+}
+
+.shadow{
+	box-shadow: 5px 7px 7px 2px #686868;
+	background-color:#E4E3E3; 
+	margin-right: 72%; 
+}
+
+time {
+	background: #f0f0f0;
+} 
+
+.block{
+	background:url(car.jpg);
+	background-size: 500px 450px;
+	background-attachment: fixed;
+	color:#DC092C; 
+	background-repeat: repeat-y;
+
+}
+
+blockquote {
+	padding-top: 21%;
+	padding-bottom: 5%;
+	padding-left:5%;
+	padding-right:55%; 
+}
+
+strike:hover{
+	border:5px solid #a12345;
+	color: #AABBCC;
+	background-color: #DDEEFF;
+	padding-left:45%;
+	padding-top: 30px;
+	padding-bottom:22px;
+	padding-right:38%;
+	margin-left:70px;
+	margin-right: 70px; 
+}	
+
+strike{
+	margin-left:45%;
+}
+
+h2 {
+	font-size: 2rem;
+}
+
+h3{
+	font-weight: bold;
+}
