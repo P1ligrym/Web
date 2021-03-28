@@ -1,47 +1,69 @@
-var divs = document.getElementsByTagName("div");
-
-for(var i = 0; i < divs.length; i++){
-   var width = divs[i].offsetWidth;
-   window.alert(width);
+function Time() {
+var message = document.getElementById("textArea").value;
+setTimeout(() => {alert(message), clear()},3000);
 }
 
-function setwidth (element) {
-   for(var i = 0; i < element.length; i++){
-      var width = element[i].offsetWidth * 2;
-      document.write(width,"\n");
-   }
+function clear() {
+var textarea = document.getElementById("textArea");
+textarea.value="";}
 
+
+function openWin() {
+    var newWindow = window.open("",height=300,width=600);
+    newWindow .document.body.style.background =  "green";
+    setTimeout(() => {newWindow .document.body.style.background =  "yellow"},3000);
 }
 
-var div_s = document.getElementsByTagName("div");
-setwidth(div_s);
-
-var classChange  = window.prompt("Введіть назву класу");
-var color  = window.prompt("Введіть колір");
-
-var changes = document.getElementsByClassName(classChange)[0];
-changes.style.color = color;
-
-
-
-var r  = confirm("“Чи бажаєте побачити властивості операційної системи?");
-if(r == true) {
-   alert(navigator.platform);
-}
-else {
-   var user = (navigator.userAgent);
-   window.alert("Користувач відмовився")
-   window.alert(navigator.appName);
-}
-var site;
-function newWindow(){
-   site= window.open("https://lpnu.ua","", height=300,width=500,toolbar,location,scrollbars);
-
+window.onload = function windowOpen() {
+    setTimeout(openWin,3000);
 }
 
 
-function NULP(){
-   site.close();
-   window.open("https://lpnu.ua");
+document.getElementById('stop').disabled = "false";
 
+function start(){
+interval = setInterval(startTimer, 1000);
+}
+
+function startTimer() {
+    var time = my_timer.innerHTML;
+    var arr = time.split(":");
+    var h = arr[0];
+    var m = arr[1];
+    var s = arr[2];
+    if (s == 59) {
+        m++;
+        if (m < 10) m = "0" + m;
+        s = 0;
+    }
+
+    if (m == 60 ) {
+        m = 0 +"0";
+        h++;
+        if (h < 10) h = "0" + h;
+    }
+    
+    else s++;
+    if (s < 10) s = "0" + s;
+    document.getElementById("my_timer").innerHTML = h+":"+m+":"+s;
+    document.getElementById('start').disabled = "false";
+    document.getElementById('stop').removeAttribute('disabled');
+}
+
+
+function stop() {
+    clearInterval(interval);
+    document.getElementById('start').removeAttribute('disabled');
+    document.getElementById('stop').disabled = "false";
+}
+
+
+function newColor() { 
+   setInterval(changeColors,3000);
+ }
+
+function changeColors() {
+    var about = document.getElementById('change');
+    var colors = ['red','blue','yellow','green','orange']
+    about.style.color = colors[Math.floor(Math.random() * colors.length)];    
 }

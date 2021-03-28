@@ -2,27 +2,25 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<style>
-		.bord{
-			width: 10px;
-		}
-	</style>
-	<style type="text/css">
-	.color{
-		color:blue;
-		width:100px;
-	}
-	</style>
+<style>
 
+</style>		
 </head>
-<body>
+<body  >
+<input   type="button" value="press" onclick="Time()">
 
-<div class="bord">part1</div>
+<textarea id="textArea">your text!</textarea>
+<div   onclick="windowOpen()"></div><br>
 
-<div class="color">asdfg</div>
+<input id="start" type="button" value="Start" onclick="start()">
+<p></p>
+<input id="stop"  type="button" value="Stop" onclick="stop()"> 
+<p><span id="my_timer">00:00:00</span></p>
 
-<input type="button" value="№1" onclick="newWindow()">
-<input type="button" value="№2" onclick="NULP()">
+<input type="button" value="New color" onclick="newColor()">
+<p id="change">I look inside myself And see my heart is black</p>
+
 <script  src="script.js"></script>
 </body>
 </html>
+
