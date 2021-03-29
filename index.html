@@ -1,82 +1,26 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="stylesheet" type="text/css" href="tools.css">
-	<title></title>
+	<meta charset="utf-8">
+<style>
+
+</style>		
 </head>
+<body  >
+<input   type="button" value="press" onclick="Time()">
 
-<body >
-	<div class="pl-1 mt-2 img-2">
-		
-		<h5>Лабораторна робота №2</h5><br>
-		<div class="mb-2"><ruby>18<rt>лютого</rt></ruby> </div>
+<textarea id="textArea">your text!</textarea>
+<div   onclick="windowOpen()"></div><br>
 
-		<table class="w-25 mt-2 ">
-			<h2>
-				<caption><u>Топ 5 кращих комп'ютерних ігор</u></caption>
-			</h2>
-			<fon size="3" color="white" face="segoe script" ><tr>
-				<td>1</td>
-				<td>Dota2</td>
-			</tr>
-			<tr>
-				<td>2</td>
-				<td>CS:GO</td>
-			</tr>
-			<tr>
-				<td>3</td>
-				<td>World of Warcraft</td>
-			</tr>
-			<tr>
-				<td>4</td>
-				<td>GTA 5</td>
-			</tr>
-			<tr>
-				<td>5</td>
-				<td>Call of Duty</td>
-			</tr></fon>
-		</table>
-		<div class="mt-2 ">
-			<button class="p-1 mb-2">Сlick!!!</button>
-		</div>
+<input id="start" type="button" value="Start" onclick="start()">
+<p></p>
+<input id="stop"  type="button" value="Stop" onclick="stop()"> 
+<p><span id="my_timer">00:00:00</span></p>
 
-		<textarea class="border-button">Game</textarea><br>
+<input type="button" value="New color" onclick="newColor()">
+<p id="change">I look inside myself And see my heart is black</p>
 
-		<select class="mt-2">
-			<option>Online</option>
-			<option>Company</option>
-		</select> <br>
-
-		<input class="mt-2 mb-2" value="I am gamer!">
-
-
-		<s>
-			<h5>Hidden poles</h5>
-		</s>
-		<str>
-
-			<input type="hidden" name="name" value="svyatoslav">
-			<input type="hidden" name="password" value="neurov">
-
-			<div class="grad mt-2"></div>
-			<div class="grad-animation"></div>
-
-			<marquee scrollamount="15"><h3>Today`s news</h3></marquee>
-
-
-			<marquee class="p-2 mt-2 bg-success tx-color" direction="right">
-				Welcome to the family Son!!! | Resident evil release in 25 March | Netflix announced anime about Dota 2
-				| Hackers stole Сyberpunk`s codes
-			</marquee>
-
-			<div class="img-1"><img src="game.png"></div>
-
-
-	</div>
-
+<script  src="script.js"></script>
 </body>
-
-
 </html>
+
